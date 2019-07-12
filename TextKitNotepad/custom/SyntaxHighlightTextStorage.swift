@@ -42,13 +42,12 @@ class SyntaxHighlightTextStorage: NSTextStorage
 extension SyntaxHighlightTextStorage{
     
     //Sends out -textStorage:willProcessEditing, fixes the attributes, sends out -textStorage:didProcessEditing, and notifies the layout managers of change with the -processEditingForTextStorage:edited:range:changeInLength:invalidatedRange: method.  Invoked from -edited:range:changeInLength: or -endEditing.
-    override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [String : Any]
-    {
-        //
+    
+    override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [NSAttributedString.Key : Any] {
         if range == nil {
             return [:]
         }
-        //        print("backingStore:location\(location),effectiveRange:\(range!)")
+        print("backingStore:location:\(location),effectiveRange:\(range!)")
         return backingStore.attributes(at: location, effectiveRange: range!)
     }
     
@@ -65,8 +64,7 @@ extension SyntaxHighlightTextStorage{
         endEditing()
     }
     
-    override func setAttributes(_ attrs: [String : Any]?, range: NSRange)
-    {
+    override func setAttributes(_ attrs: [NSAttributedString.Key : Any]?, range: NSRange) {
         //Sets the attributes for the characters in the specified range to the specified attributes.
         print("setAttributes:\(attrs!) range:\(NSStringFromRange(range))")
         beginEditing()
@@ -110,12 +108,12 @@ extension SyntaxHighlightTextStorage{
         
         // 1. create some fonts
         #if os(iOS)
-        let font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        let font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         #elseif os(OSX)
         let font = NSFont.systemFont(ofSize:12.0)
         #endif
         
-        let normalAttrs = [NSFontAttributeName:font]
+        let normalAttrs = [NSAttributedString.Key.font:font]
         // iterate over each replacement
         for regexStr in replacements.keys
         {
@@ -132,13 +130,13 @@ extension SyntaxHighlightTextStorage{
             }
             
             //获取对应正则的字体样式
-            let textAttributes:[String:Any] = replacements[regexStr] as! [String : Any]
+            let textAttributes:[NSAttributedString.Key:Any] = replacements[regexStr] as! [NSAttributedString.Key : Any]
             // 3. iterate over each match, making the text bold
             //使匹配到的所有字体样式生效
             regex!.enumerateMatches(in: backingStore.string, options: .init(rawValue: 0), range: searchRange)
             { (match, flags, stop) in
                 // apply the style
-                let matchRange = match?.rangeAt(1)
+                let matchRange = match?.range(at: 1)
                 let replaceText = (backingStore.string as NSString).substring(with: matchRange!)
                 print("更新样式的内容：\(replaceText)")
                 //重载的方法
@@ -166,30 +164,30 @@ extension SyntaxHighlightTextStorage{
         //3. [NSFontAttributeName:scriptFont]: create the attributes
         #if os(iOS)
             //
-            let bodyFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: UIFontTextStyle.body)
+        let bodyFontDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: UIFont.TextStyle.body)
             
             //script风格的Zapfino字体
-            let scriptFontDescriptor = UIFontDescriptor(fontAttributes: [UIFontDescriptorFamilyAttribute:"Zapfino"])
-            let bodyFontSize = bodyFontDescriptor.fontAttributes[UIFontDescriptorSizeAttribute]
-            let scriptFont = UIFont(descriptor: scriptFontDescriptor,
+        let scriptFontDescriptor = UIFontDescriptor(fontAttributes: [UIFontDescriptor.AttributeName.family:"Zapfino"])
+        let bodyFontSize = bodyFontDescriptor.fontAttributes[UIFontDescriptor.AttributeName.size]
+        let scriptFont = UIFont(descriptor: scriptFontDescriptor,
                                           size: CGFloat(((bodyFontSize as AnyObject).floatValue)!))
-            let scriptAttributes = [NSFontAttributeName:scriptFont]
+        let scriptAttributes = [NSAttributedString.Key.font:scriptFont]
             
             //加粗
-            let descriptorWithTraintBold = bodyFontDescriptor.withSymbolicTraits(.traitBold)
-            //size值为0，会迫使UIFont返回用户设置的字体大小。
-            let fontBold = UIFont.init(descriptor: descriptorWithTraintBold!, size: 0.0)
-            let boldAttributes = [NSFontAttributeName:fontBold]
+        let descriptorWithTraintBold = bodyFontDescriptor.withSymbolicTraits(.traitBold)
+        //size值为0，会迫使UIFont返回用户设置的字体大小。
+        let fontBold = UIFont.init(descriptor: descriptorWithTraintBold!, size: 0.0)
+        let boldAttributes = [NSAttributedString.Key.font:fontBold]
             
-            //斜体
-            let descriptorWithTraintItalic = bodyFontDescriptor.withSymbolicTraits(.traitItalic)
-            let fontItalic = UIFont.init(descriptor: descriptorWithTraintItalic!, size: 0.0)
-            let italicAttributes = [NSFontAttributeName:fontItalic]
+        //斜体
+        let descriptorWithTraintItalic = bodyFontDescriptor.withSymbolicTraits(.traitItalic)
+        let fontItalic = UIFont.init(descriptor: descriptorWithTraintItalic!, size: 0.0)
+        let italicAttributes = [NSAttributedString.Key.font:fontItalic]
             
-            //删除线：NSStrikethroughStyleAttributeName
-            let strikeThroughAttributes = [NSStrikethroughStyleAttributeName:NSNumber.init(value: 1)]
-            //字体颜色：NSForegroundColorAttributeName
-            let redTextAttributes = [NSForegroundColorAttributeName:UIColor.red]
+        //删除线：NSStrikethroughStyleAttributeName
+        let strikeThroughAttributes = [NSAttributedString.Key.strikethroughStyle:NSNumber.init(value: 1)]
+        //字体颜色：NSForegroundColorAttributeName
+        let redTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.red]
         #elseif os(OSX)
             //script风格的Zapfino字体
             let font = NSFont.init(name: "Zapfino", size: 14.0)
@@ -238,7 +236,7 @@ extension SyntaxHighlightTextStorage{
         
         // change the 'global' font
         #if os(iOS)
-            let bodyAttr = [NSFontAttributeName:UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        let bodyAttr = [NSAttributedString.Key.font:UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)]
         #elseif os(OSX)
             let bodyAttr = [NSFontAttributeName:NSFont(name: "Zapfino", size: 14.0)]
         #endif

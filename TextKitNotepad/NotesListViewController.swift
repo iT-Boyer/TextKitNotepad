@@ -59,10 +59,10 @@ class NotesListViewController: UITableViewController {
         let font = UIFont.preferredFont(forTextStyle: .headline)
         let textColor = UIColor.init(red: 0.175, green: 0.458, blue: 0.831, alpha: 1.0)
         //字体凸版印刷效果
-        let store:[String:Any] = [NSForegroundColorAttributeName:textColor,
-                                  NSFontAttributeName:font,
-                                  NSTextEffectAttributeName:NSTextEffectLetterpressStyle]
-        cell.textLabel?.attributedText = NSAttributedString.init(string: note.title, attributes: store)
+        let store:[NSAttributedString.Key:Any] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):textColor,
+                                                  NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue):font,
+                                                  NSAttributedString.Key(rawValue: NSAttributedString.Key.textEffect.rawValue):NSAttributedString.TextEffectStyle.letterpressStyle]
+        cell.textLabel?.attributedText = NSAttributedString.init(string: note.title, attributes: store);
         
         
         return cell

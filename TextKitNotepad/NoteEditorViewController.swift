@@ -39,11 +39,11 @@ class NoteEditorViewController: UIViewController,UITextViewDelegate {
     override func viewDidLoad() {
         //
         //字体变化通知:调用preferredContentSizeChanged:方法
-        NotificationCenter.default.addObserver(self, selector: #selector(NoteEditorViewController.preferredContentSizeChanged(_:)), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NoteEditorViewController.preferredContentSizeChanged(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
         
         //编辑长文本的时候键盘挡住了下半部分文本的问题
-        NotificationCenter.default.addObserver(self, selector: #selector(NoteEditorViewController.keyboardDidShow(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(NoteEditorViewController.keyboardDidHide(_:)), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NoteEditorViewController.keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NoteEditorViewController.keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         
         createTextView()
         //时间戳
@@ -55,8 +55,8 @@ class NoteEditorViewController: UIViewController,UITextViewDelegate {
     func createTextView()
     {
         // 1. Create the text storage that backs the editor
-        let bodyFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
-        let attrs = [NSFontAttributeName:bodyFont]
+        let bodyFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
+        let attrs = [NSAttributedString.Key.font:bodyFont]
         let attrString = NSAttributedString(string: note.contents,attributes: attrs)
         textStorage = SyntaxHighlightTextStorage()
         textStorage.append(attrString)
@@ -91,7 +91,7 @@ class NoteEditorViewController: UIViewController,UITextViewDelegate {
     }
     
     //字体变化通知时调用
-    func preferredContentSizeChanged(_ notification:NSNotification)
+    @objc func preferredContentSizeChanged(_ notification:NSNotification)
     {
         //收到用于指定本类接收字体设定变化的通知后
         textStorage.update()
@@ -122,14 +122,14 @@ class NoteEditorViewController: UIViewController,UITextViewDelegate {
 //键盘遮挡问题
 extension NoteEditorViewController
 {
-    func keyboardDidShow(_ notification:NSNotification) {
+    @objc func keyboardDidShow(_ notification:NSNotification) {
         //
         let userInfo = notification.userInfo
-        keyboardSize = (userInfo![UIKeyboardFrameBeginUserInfoKey] as AnyObject).cgRectValue.size
+        keyboardSize = (userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as AnyObject).cgRectValue.size
         updateTextViewSize()
     }
     
-    func keyboardDidHide(_ notification:NSNotification) {
+    @objc func keyboardDidHide(_ notification:NSNotification) {
         //
         keyboardSize = CGSize(width: 0,height: 0)
         updateTextViewSize()
@@ -140,7 +140,7 @@ extension NoteEditorViewController
         //计算文本视图尺寸的时候你要考虑到屏幕的方向
         let orientation = UIApplication.shared.statusBarOrientation
         //因为屏幕方向变化后,UIView的宽高属性会对换,但是键盘的宽高属性却不会
-        let keyboardHeight = UIInterfaceOrientationIsLandscape(orientation) ? keyboardSize.width:keyboardSize.height
+        let keyboardHeight = orientation.isLandscape ? keyboardSize.width:keyboardSize.height
         
         ibTextView.frame = CGRect.init(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height - keyboardHeight)
     }
