@@ -183,16 +183,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="CmW-v9-klG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="MDw-BY-VPS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="prN-NI-Go6">
                             <connections>
-                                <segue destination="W2O-zq-ynf" kind="show" id="imh-3C-ZDI"/>
+                                <action selector="ibaBack:" destination="6Yd-V7-rIF" id="Z07-NP-TTy"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SKG-E5-SPB">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="AddNewNote" id="obN-5u-vYu"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="SKG-E5-SPB">
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="AddNewNote" id="obN-5u-vYu"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="MDw-BY-VPS">
+                                <connections>
+                                    <segue destination="W2O-zq-ynf" kind="show" id="imh-3C-ZDI"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJ6-L1-n2r" userLabel="First Responder" sceneMemberID="firstResponder"/>

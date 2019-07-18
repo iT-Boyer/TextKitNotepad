@@ -128,5 +128,9 @@ class NotesListViewController: UITableViewController {
         }
     }
     
-
+    
+    @IBAction func ibaBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
