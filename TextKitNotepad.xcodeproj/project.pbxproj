@@ -13,6 +13,18 @@
 		145968EF1CD9FF9600732D9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145968ED1CD9FF9600732D9A /* LaunchScreen.storyboard */; };
 		145968FA1CD9FF9700732D9A /* TextKitNotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145968F91CD9FF9700732D9A /* TextKitNotepadTests.swift */; };
 		145969081CDA012A00732D9A /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145969071CDA012A00732D9A /* NoteModel.swift */; };
+		8404EC2E22DFFE2900F25B6D /* hsg_app_Notepad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8404EC2522DFFE2800F25B6D /* hsg_app_Notepad.framework */; };
+		8404EC3522DFFE2900F25B6D /* hsg_app_NotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8404EC3422DFFE2900F25B6D /* hsg_app_NotepadTests.swift */; };
+		8404EC3722DFFE2900F25B6D /* hsg_app_Notepad.h in Headers */ = {isa = PBXBuildFile; fileRef = 8404EC2722DFFE2900F25B6D /* hsg_app_Notepad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8404EC3A22DFFE2900F25B6D /* hsg_app_Notepad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8404EC2522DFFE2800F25B6D /* hsg_app_Notepad.framework */; };
+		8404EC3B22DFFE2900F25B6D /* hsg_app_Notepad.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8404EC2522DFFE2800F25B6D /* hsg_app_Notepad.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8404EC4322DFFEA100F25B6D /* SyntaxHighlightTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAA89F1DE13E8F00FE1A6F /* SyntaxHighlightTextStorage.swift */; };
+		8404EC4422DFFEA100F25B6D /* TimeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843894D41DE00FDC00212B65 /* TimeIndicatorView.swift */; };
+		8404EC4522DFFEA100F25B6D /* DownloadFontViewControllert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847B62251DE197090097E2E6 /* DownloadFontViewControllert.swift */; };
+		8404EC4622DFFEA100F25B6D /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145969071CDA012A00732D9A /* NoteModel.swift */; };
+		8404EC4822DFFEA100F25B6D /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843894D81DE01D7100212B65 /* NotesListViewController.swift */; };
+		8404EC4922DFFEA100F25B6D /* NoteEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145968E61CD9FF9600732D9A /* NoteEditorViewController.swift */; };
+		8404EC4A22DFFEEC00F25B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145968E81CD9FF9600732D9A /* Main.storyboard */; };
 		843894D51DE00FDC00212B65 /* TimeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843894D41DE00FDC00212B65 /* TimeIndicatorView.swift */; };
 		843894D91DE01D7100212B65 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843894D81DE01D7100212B65 /* NotesListViewController.swift */; };
 		843C59C21DE341A5006E84B4 /* CustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843C59C11DE341A5006E84B4 /* CustomAnimation.swift */; };
@@ -36,7 +48,42 @@
 			remoteGlobalIDString = 145968E01CD9FF9500732D9A;
 			remoteInfo = TextKitNotepad;
 		};
+		8404EC2F22DFFE2900F25B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 145968D91CD9FF9500732D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8404EC2422DFFE2800F25B6D;
+			remoteInfo = hsg.app.Notepad;
+		};
+		8404EC3122DFFE2900F25B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 145968D91CD9FF9500732D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 145968E01CD9FF9500732D9A;
+			remoteInfo = TextKitNotepad;
+		};
+		8404EC3822DFFE2900F25B6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 145968D91CD9FF9500732D9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8404EC2422DFFE2800F25B6D;
+			remoteInfo = hsg.app.Notepad;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8404EC4122DFFE2900F25B6D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8404EC3B22DFFE2900F25B6D /* hsg_app_Notepad.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		145968E11CD9FF9500732D9A /* TextKitNotepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextKitNotepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +97,12 @@
 		145968F91CD9FF9700732D9A /* TextKitNotepadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextKitNotepadTests.swift; sourceTree = "<group>"; };
 		145968FB1CD9FF9700732D9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		145969071CDA012A00732D9A /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteModel.swift; path = Model/NoteModel.swift; sourceTree = "<group>"; };
+		8404EC2522DFFE2800F25B6D /* hsg_app_Notepad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = hsg_app_Notepad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8404EC2722DFFE2900F25B6D /* hsg_app_Notepad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hsg_app_Notepad.h; sourceTree = "<group>"; };
+		8404EC2822DFFE2900F25B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8404EC2D22DFFE2900F25B6D /* hsg.app.NotepadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hsg.app.NotepadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8404EC3422DFFE2900F25B6D /* hsg_app_NotepadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hsg_app_NotepadTests.swift; sourceTree = "<group>"; };
+		8404EC3622DFFE2900F25B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		843894D41DE00FDC00212B65 /* TimeIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIndicatorView.swift; sourceTree = "<group>"; };
 		843894D81DE01D7100212B65 /* NotesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
 		843C59C11DE341A5006E84B4 /* CustomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnimation.swift; sourceTree = "<group>"; };
@@ -69,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8404EC3A22DFFE2900F25B6D /* hsg_app_Notepad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +130,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8404EC2222DFFE2800F25B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8404EC2A22DFFE2900F25B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8404EC2E22DFFE2900F25B6D /* hsg_app_Notepad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +164,8 @@
 				84BAA8A21DE13F2900FE1A6F /* TextKitNotepadForOSX */,
 				145968E31CD9FF9600732D9A /* TextKitNotepad */,
 				145968F81CD9FF9700732D9A /* TextKitNotepadTests */,
+				8404EC2622DFFE2900F25B6D /* hsg.app.Notepad */,
+				8404EC3322DFFE2900F25B6D /* hsg.app.NotepadTests */,
 				145968E21CD9FF9500732D9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +176,8 @@
 				145968E11CD9FF9500732D9A /* TextKitNotepad.app */,
 				145968F51CD9FF9700732D9A /* TextKitNotepadTests.xctest */,
 				84BAA89C1DE13CF600FE1A6F /* TextKitNotepadForOSX.app */,
+				8404EC2522DFFE2800F25B6D /* hsg_app_Notepad.framework */,
+				8404EC2D22DFFE2900F25B6D /* hsg.app.NotepadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +232,24 @@
 			name = Memory;
 			sourceTree = "<group>";
 		};
+		8404EC2622DFFE2900F25B6D /* hsg.app.Notepad */ = {
+			isa = PBXGroup;
+			children = (
+				8404EC2722DFFE2900F25B6D /* hsg_app_Notepad.h */,
+				8404EC2822DFFE2900F25B6D /* Info.plist */,
+			);
+			path = hsg.app.Notepad;
+			sourceTree = "<group>";
+		};
+		8404EC3322DFFE2900F25B6D /* hsg.app.NotepadTests */ = {
+			isa = PBXGroup;
+			children = (
+				8404EC3422DFFE2900F25B6D /* hsg_app_NotepadTests.swift */,
+				8404EC3622DFFE2900F25B6D /* Info.plist */,
+			);
+			path = hsg.app.NotepadTests;
+			sourceTree = "<group>";
+		};
 		843C59C01DE3410F006E84B4 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +283,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		8404EC2022DFFE2800F25B6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8404EC3722DFFE2900F25B6D /* hsg_app_Notepad.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		145968E01CD9FF9500732D9A /* TextKitNotepad */ = {
 			isa = PBXNativeTarget;
@@ -200,10 +302,12 @@
 				145968DD1CD9FF9500732D9A /* Sources */,
 				145968DE1CD9FF9500732D9A /* Frameworks */,
 				145968DF1CD9FF9500732D9A /* Resources */,
+				8404EC4122DFFE2900F25B6D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8404EC3922DFFE2900F25B6D /* PBXTargetDependency */,
 			);
 			name = TextKitNotepad;
 			productName = TextKitNotepad;
@@ -226,6 +330,43 @@
 			name = TextKitNotepadTests;
 			productName = TextKitNotepadTests;
 			productReference = 145968F51CD9FF9700732D9A /* TextKitNotepadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8404EC2422DFFE2800F25B6D /* hsg.app.Notepad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8404EC4022DFFE2900F25B6D /* Build configuration list for PBXNativeTarget "hsg.app.Notepad" */;
+			buildPhases = (
+				8404EC2022DFFE2800F25B6D /* Headers */,
+				8404EC2122DFFE2800F25B6D /* Sources */,
+				8404EC2222DFFE2800F25B6D /* Frameworks */,
+				8404EC2322DFFE2800F25B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hsg.app.Notepad;
+			productName = hsg.app.Notepad;
+			productReference = 8404EC2522DFFE2800F25B6D /* hsg_app_Notepad.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8404EC2C22DFFE2900F25B6D /* hsg.app.NotepadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8404EC4222DFFE2900F25B6D /* Build configuration list for PBXNativeTarget "hsg.app.NotepadTests" */;
+			buildPhases = (
+				8404EC2922DFFE2900F25B6D /* Sources */,
+				8404EC2A22DFFE2900F25B6D /* Frameworks */,
+				8404EC2B22DFFE2900F25B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8404EC3022DFFE2900F25B6D /* PBXTargetDependency */,
+				8404EC3222DFFE2900F25B6D /* PBXTargetDependency */,
+			);
+			name = hsg.app.NotepadTests;
+			productName = hsg.app.NotepadTests;
+			productReference = 8404EC2D22DFFE2900F25B6D /* hsg.app.NotepadTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		84BAA88D1DE13CF500FE1A6F /* TextKitNotepadForOSX */ = {
@@ -251,7 +392,7 @@
 		145968D91CD9FF9500732D9A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = recomend;
 				TargetAttributes = {
@@ -261,6 +402,15 @@
 					145968F41CD9FF9700732D9A = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0810;
+						TestTargetID = 145968E01CD9FF9500732D9A;
+					};
+					8404EC2422DFFE2800F25B6D = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					8404EC2C22DFFE2900F25B6D = {
+						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 145968E01CD9FF9500732D9A;
 					};
 				};
@@ -282,6 +432,8 @@
 				145968E01CD9FF9500732D9A /* TextKitNotepad */,
 				145968F41CD9FF9700732D9A /* TextKitNotepadTests */,
 				84BAA88D1DE13CF500FE1A6F /* TextKitNotepadForOSX */,
+				8404EC2422DFFE2800F25B6D /* hsg.app.Notepad */,
+				8404EC2C22DFFE2900F25B6D /* hsg.app.NotepadTests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +449,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		145968F31CD9FF9700732D9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8404EC2322DFFE2800F25B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8404EC4A22DFFEEC00F25B6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8404EC2B22DFFE2900F25B6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -338,6 +505,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8404EC2122DFFE2800F25B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8404EC4322DFFEA100F25B6D /* SyntaxHighlightTextStorage.swift in Sources */,
+				8404EC4422DFFEA100F25B6D /* TimeIndicatorView.swift in Sources */,
+				8404EC4522DFFEA100F25B6D /* DownloadFontViewControllert.swift in Sources */,
+				8404EC4622DFFEA100F25B6D /* NoteModel.swift in Sources */,
+				8404EC4822DFFEA100F25B6D /* NotesListViewController.swift in Sources */,
+				8404EC4922DFFEA100F25B6D /* NoteEditorViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8404EC2922DFFE2900F25B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8404EC3522DFFE2900F25B6D /* hsg_app_NotepadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84BAA88E1DE13CF600FE1A6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +546,21 @@
 			isa = PBXTargetDependency;
 			target = 145968E01CD9FF9500732D9A /* TextKitNotepad */;
 			targetProxy = 145968F61CD9FF9700732D9A /* PBXContainerItemProxy */;
+		};
+		8404EC3022DFFE2900F25B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8404EC2422DFFE2800F25B6D /* hsg.app.Notepad */;
+			targetProxy = 8404EC2F22DFFE2900F25B6D /* PBXContainerItemProxy */;
+		};
+		8404EC3222DFFE2900F25B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 145968E01CD9FF9500732D9A /* TextKitNotepad */;
+			targetProxy = 8404EC3122DFFE2900F25B6D /* PBXContainerItemProxy */;
+		};
+		8404EC3922DFFE2900F25B6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8404EC2422DFFE2800F25B6D /* hsg.app.Notepad */;
+			targetProxy = 8404EC3822DFFE2900F25B6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -469,7 +672,9 @@
 		145968FF1CD9FF9700732D9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TextKitNotepad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.recomend.TextKitNotepad;
@@ -481,7 +686,9 @@
 		145969001CD9FF9700732D9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TextKitNotepad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.recomend.TextKitNotepad;
@@ -512,6 +719,162 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.recomend.TextKitNotepadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextKitNotepad.app/TextKitNotepad";
+			};
+			name = Release;
+		};
+		8404EC3C22DFFE2900F25B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = hsg.app.Notepad/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.hsg-app-Notepad";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8404EC3D22DFFE2900F25B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = hsg.app.Notepad/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.hsg-app-Notepad";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8404EC3E22DFFE2900F25B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = hsg.app.NotepadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.hsg-app-NotepadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextKitNotepad.app/TextKitNotepad";
+			};
+			name = Debug;
+		};
+		8404EC3F22DFFE2900F25B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = hsg.app.NotepadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jinher.com.hsg-app-NotepadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextKitNotepad.app/TextKitNotepad";
 			};
 			name = Release;
@@ -570,6 +933,24 @@
 			buildConfigurations = (
 				145969021CD9FF9700732D9A /* Debug */,
 				145969031CD9FF9700732D9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8404EC4022DFFE2900F25B6D /* Build configuration list for PBXNativeTarget "hsg.app.Notepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8404EC3C22DFFE2900F25B6D /* Debug */,
+				8404EC3D22DFFE2900F25B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8404EC4222DFFE2900F25B6D /* Build configuration list for PBXNativeTarget "hsg.app.NotepadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8404EC3E22DFFE2900F25B6D /* Debug */,
+				8404EC3F22DFFE2900F25B6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
