@@ -38,6 +38,7 @@
 		84BAA8A61DE1675600FE1A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAA8A51DE1675500FE1A6F /* AppDelegate.swift */; };
 		84BAA8A81DE1689A00FE1A6F /* NoteEditorViewControllerOSX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAA8A71DE1689A00FE1A6F /* NoteEditorViewControllerOSX.swift */; };
 		84BAA8AA1DE17C3700FE1A6F /* TextKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAA8A91DE17C3700FE1A6F /* TextKitView.swift */; };
+		BFC71D615D0C68BBDE7E568D /* Pods_hsg_app_Notepad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9314599CC62AECF651F819 /* Pods_hsg_app_Notepad.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		145968F91CD9FF9700732D9A /* TextKitNotepadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextKitNotepadTests.swift; sourceTree = "<group>"; };
 		145968FB1CD9FF9700732D9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		145969071CDA012A00732D9A /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteModel.swift; path = Model/NoteModel.swift; sourceTree = "<group>"; };
+		4B317C8D94E76D8AC444629D /* Pods-hsg.app.Notepad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hsg.app.Notepad.release.xcconfig"; path = "Target Support Files/Pods-hsg.app.Notepad/Pods-hsg.app.Notepad.release.xcconfig"; sourceTree = "<group>"; };
 		8404EC2522DFFE2800F25B6D /* hsg_app_Notepad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = hsg_app_Notepad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8404EC2722DFFE2900F25B6D /* hsg_app_Notepad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hsg_app_Notepad.h; sourceTree = "<group>"; };
 		8404EC2822DFFE2900F25B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +117,8 @@
 		84BAA8A51DE1675500FE1A6F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TextKitNotepadForOSX/AppDelegate.swift; sourceTree = "<group>"; };
 		84BAA8A71DE1689A00FE1A6F /* NoteEditorViewControllerOSX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteEditorViewControllerOSX.swift; path = TextKitNotepadForOSX/NoteEditorViewControllerOSX.swift; sourceTree = "<group>"; };
 		84BAA8A91DE17C3700FE1A6F /* TextKitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextKitView.swift; path = TextKitNotepadForOSX/TextKitView.swift; sourceTree = "<group>"; };
+		8AD7BE1FB102F53391EF2EF6 /* Pods-hsg.app.Notepad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hsg.app.Notepad.debug.xcconfig"; path = "Target Support Files/Pods-hsg.app.Notepad/Pods-hsg.app.Notepad.debug.xcconfig"; sourceTree = "<group>"; };
+		DE9314599CC62AECF651F819 /* Pods_hsg_app_Notepad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hsg_app_Notepad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC71D615D0C68BBDE7E568D /* Pods_hsg_app_Notepad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +172,8 @@
 				8404EC2622DFFE2900F25B6D /* hsg.app.Notepad */,
 				8404EC3322DFFE2900F25B6D /* hsg.app.NotepadTests */,
 				145968E21CD9FF9500732D9A /* Products */,
+				F5B5E6FDEF32DC4B6EB7F2C8 /* Pods */,
+				945490ED1720051C3104D328 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +288,24 @@
 			name = TextKitNotepadForOSX;
 			sourceTree = "<group>";
 		};
+		945490ED1720051C3104D328 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE9314599CC62AECF651F819 /* Pods_hsg_app_Notepad.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5B5E6FDEF32DC4B6EB7F2C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AD7BE1FB102F53391EF2EF6 /* Pods-hsg.app.Notepad.debug.xcconfig */,
+				4B317C8D94E76D8AC444629D /* Pods-hsg.app.Notepad.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -336,6 +361,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8404EC4022DFFE2900F25B6D /* Build configuration list for PBXNativeTarget "hsg.app.Notepad" */;
 			buildPhases = (
+				7FCE64BBF82984D371A1D951 /* [CP] Check Pods Manifest.lock */,
 				8404EC2022DFFE2800F25B6D /* Headers */,
 				8404EC2122DFFE2800F25B6D /* Sources */,
 				8404EC2222DFFE2800F25B6D /* Frameworks */,
@@ -481,6 +507,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7FCE64BBF82984D371A1D951 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hsg.app.Notepad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		145968DD1CD9FF9500732D9A /* Sources */ = {
@@ -725,6 +776,7 @@
 		};
 		8404EC3C22DFFE2900F25B6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD7BE1FB102F53391EF2EF6 /* Pods-hsg.app.Notepad.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -768,6 +820,7 @@
 		};
 		8404EC3D22DFFE2900F25B6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B317C8D94E76D8AC444629D /* Pods-hsg.app.Notepad.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
